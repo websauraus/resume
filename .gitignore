@@ -1,0 +1,17 @@
+# Backup
+back/
+
+# LaTeX build files
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex(busy)
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+.vscode/

@@ -1,0 +1,236 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\newcommand{\resumeProjectSubheading}[3]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \small #3 \\
+      \textit{\small #2} & \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape James Hansen} \\ \vspace{1pt}
+    \small San Jose, CA $|$ \href{mailto:jamesphansen@proton.me}{\underline{jamesphansen@proton.me}} $|$
+    \href{https://linkedin.com/in/jameshansen06}{\underline{linkedin.com/in/jameshansen06}} $|$
+    \href{https://github.com/websauraus}{\underline{github.com/websauraus}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {San Jose State University}{San Jose, CA}
+      {BS Computer Engineering, College of Engineering}{Graduation: May 2029}
+      \resumeItemListStart
+        \resumeItem{\textbf{Organizations:} Software and Computer Engineering Society, Spartan Racing.}
+        \resumeItem{\textbf{Coursework:} Object Oriented Concepts and Methodology, Programming Concepts and Methodology, Discrete Math.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Software Engineering Intern}{San Jose, CA}
+      {Spartan Racing}{August 2026 -- Present}
+      \resumeItemListStart
+        \resumeItem{Analyzed telemetry from 80+ laps in i2 Pro and spreadsheet charts for the team's Preliminary Design Review (PDR), finding that regen braking does not notably raise BMS temperatures and clearing the team to use regen more aggressively this year.}
+        \resumeItem{Studied previous cars' codebases, design review documentation, and technical literature to quickly ramp up on vehicle software and contribute effectively to this season's car.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Software Engineering Intern}{San Jose, CA}
+      {San Jose State University}{June 2026 -- August 2026}
+      \resumeItemListStart
+        \resumeItem{Created monitoring dashboards for running school services with Grafana, Prometheus, Python and Docker.}
+        \resumeItem{Refactored dashboards in Grafana to use the Grafanalib Python library instead of large JSON files.}
+        \resumeItem{Developed a wrapper class to abstract library complexity, streamlining dashboard and panel creation for users.}
+        \resumeItem{Dynamically generated the dashboards from Python code with file globs and Docker, deployed behind Nginx.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Linux Team Lead}{San Jose, CA}
+      {Santa Teresa High School CyberPatriot}{October 2022 -- June 2025}
+      \resumeItemListStart
+        \resumeItem{Placed 17th nationally out of 5,000+ teams in CyberPatriot, a national cyber defense competition, by identifying and remediating system vulnerabilities under time constraints.}
+        \resumeItem{Hardened Linux systems by configuring services, network settings, firewall rules, and user permissions to close security gaps and secure nearly 1/3 of the team's points.}
+        \resumeItem{Led technical training sessions on Linux system administration and cybersecurity fundamentals, mentoring 40+ club members on secure configuration practices.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+
+      \resumeProjectSubheading
+          {\textbf{Rankup}}
+          {Python, TypeScript, Redis, Docker, React, Anthropic API}
+          {Berkeley AI Hackathon 2026}
+          \resumeItemListStart
+            \resumeItem{Created rule-based detectors to flag round-level decision mistakes (passive utility, isolated deaths, overrotation) and integrated awpy nav-mesh resolution to translate raw positions into map callouts.}
+            \resumeItem{Architected a full-stack RAG pipeline in Python/FastAPI with Redis vector search and demoparser2, parsing CS2 .dem files to surface similar past mistakes to the player.}
+            \resumeItem{Instrumented LLM coaching output with custom logging and a groundedness evaluator, then engineered a containerized React/TypeScript frontend with graceful degradation so analysis keeps running without an API key or Redis.}
+            \resumeItem{Integrated the Anthropic API to generate natural-language coaching reports and targeted practice drills from detected mistakes, and orchestrated the full stack with Docker Compose behind Nginx.}
+          \resumeItemListEnd
+
+      \resumeProjectSubheading
+          {\textbf{Compass}}
+          {TypeScript, React, Node.js, Anthropic API, Nexla, Pomerium}
+          {LoopHack 2026}
+          \resumeItemListStart
+            \resumeItem{Built a full-stack, event-driven autonomous coding agent with a React/TypeScript frontend and Node.js/TypeScript backend, turning a single filed issue into a self-running plan-implement-review-merge loop.}
+            \resumeItem{Defined a fixed API interface with mock and live implementations, letting the full app run offline for demos.}
+            \resumeItem{Implemented a policy guard enforcing file-boundary scoping and rate limits on agent writes, integrating the Anthropic API, Nexla, and Pomerium with full audit logging.}
+            \resumeItem{Shipped a live issue-lifecycle timeline in React and TypeScript that mirrors backend event-bus stages in real time as each issue moves through planning, review, and merge.}
+          \resumeItemListEnd
+
+%      \resumeProjectSubheading
+%          {\textbf{Dessert Competition Database}}
+%          {React.js, Express.js, MongoDB, Axios}
+%          {}
+%          \resumeItemListStart
+%            \resumeItem{Led a team of 3 software engineering students to build a viewable database for a club's dessert competition.}
+%            \resumeItem{Built a RESTful API in Express.js to implement CRUD operations for dessert entries stored in MongoDB.}
+%            \resumeItem{Created an Admin Interface in React.js, cutting data entry time by 40\%, and increasing user engagement by 25\%.}
+%            \resumeItem{Leveraged the Axios JavaScript library for communication between the React.js frontend and the Express.js backend.}
+%          \resumeItemListEnd
+
+%      \resumeProjectSubheading
+%          {\textbf{ISBN Search Tool}}
+%          {React.js, Docker, TailwindCSS, Mocha, Chai, Nginx}
+%          {}
+%          \resumeItemListStart
+%            \resumeItem{Implemented an ISBN search tool for class materials using React.js, Docker and TailwindCSS.}
+%            \resumeItem{Integrated the Openlibrary API with the JavaScript fetch function to gather relevant book information.}
+%            \resumeItem{Wrote unit tests in mocha and chai to validate robust JSON parsing logic and streamline user experience.}
+%            \resumeItem{Deployed the tool on a school website with Nginx and Docker, serving minified JavaScript files to boost performance.}
+%          \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, TypeScript, JavaScript, Java, C++, SQL, Bash, HTML/CSS} \\
+     \textbf{Frameworks}{: React, Node.js, Express, FastAPI, TailwindCSS} \\
+     \textbf{Databases}{: Redis, MongoDB} \\
+     \textbf{DevOps/Tools}{: Docker, Linux, Nginx, Git, Grafana, Prometheus}
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}

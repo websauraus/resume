@@ -1,0 +1,37 @@
+name: Build Resume
+
+on:
+  push:
+    paths:
+      - 'James_Hansen_Resume.tex'
+  workflow_dispatch:   # lets you trigger it manually from the Actions tab
+
+permissions:
+  contents: write      # needed to push the generated files back
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install LaTeX and ImageMagick
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive-latex-base texlive-latex-extra texlive-fonts-recommended imagemagick ghostscript
+          # Ubuntu's ImageMagick blocks PDF reading by default; allow it
+          sudo sed -i 's/rights="none" pattern="PDF"/rights="read|write" pattern="PDF"/' /etc/ImageMagick-6/policy.xml
+
+      - name: Compile PDF
+        run: pdflatex -interaction=nonstopmode James_Hansen_Resume.tex
+
+      - name: Convert to PNG
+        run: convert -density 600 James_Hansen_Resume.pdf -background white -alpha remove -alpha off James_Hansen_Resume.png
+
+      - name: Commit generated files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898733+github-actions[bot]@users.noreply.github.com"
+          git add James_Hansen_Resume.pdf James_Hansen_Resume.png
+          git diff --staged --quiet || git commit -m "Build resume PDF and PNG"
+          git push

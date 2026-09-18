@@ -1,8 +1,3 @@
 # resume
-LaTeX template for my personal resume
-
-Based off of [sb2nov/resume](https://github.com/sb2nov/resume/)
-
-Use it on overleaf: [Jake's Resume](https://www.overleaf.com/latex/templates/jakes-resume/syzfjbzwjncs) (Not updated)
-
-![Resume Preview](resume.png)
+Based on Jake's Resume. Github action auto renders the pdf, and converts to a png to display below.
+![Resume Preview](James_Hansen_Resume.png)
